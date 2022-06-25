@@ -1,0 +1,16 @@
+  - hosts: all
+    tasks:
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: latest
+  - name: Start httpd
+    service:
+      name: httpd
+      state: started
+      enabled: yes
+  - name: Install unzip
+    yum:
+      name: unzip
+      state: latest
+  - Download / Unzip
